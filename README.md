@@ -109,6 +109,37 @@ If we pay close attention, the 5 dominant frequencies in this signal are rationa
 
 # Pyzam
 
+Most likely, you are familiar with music recognition systems (such as Shazam). It is interesting to know that music recognition in these systems is done with the help of Fourier transform. In this part, we want to implement such a system ourselves!
+
+We know that by using the Fourier transform, we can move the signals from the time domain to the frequency domain. By doing this, the constituent frequencies of a signal (which could not be identified in the time domain) are determined. For example, consider the following audio signal in the time domain. Suppose we want to obtain the constituent components of this signal.
+
+![image](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/4ecf9182-8b32-4d35-b82f-15813f04cf4f)
+
+As you can see, the above diagram gives complete information about signal changes in the time domain. For example, we notice that this sound is silent between 2 and 3 seconds. But this chart does not give us any information about the frequencies in other times. The following graph is obtained by calculating and plotting the Fourier transform using the fft function in numpy.
+
+![image](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/7c152e80-28c4-4f3b-8511-455ed14c192c)
+
+As you can see the output is similar to what we have implemented in the Fourier transform section, however in this section we use numpy for it's better performance. This chart gives us complete information about the range of frequencies in the signal. For example, we notice that frequencies around 750 and 1250 Hz make up our signal. But the chart above does not give us any information about when each of these frequencies were present.
+
+To obtain this information, we need a graph that gives us a state between the time and frequency domains. Suppose we break the given signal into shorter seperate time windows (for example, 100 milliseconds), and for each time window we calculate its Fourier transform independently. Putting this instantaneous transformation together, we get a frequency versus time graph. We arrive at what is called the spectrogram or spectrogram of the signal. For example, for the mentioned signal, its spectrogram is as follows (brighter points mean that the Fourier transform value is larger at that point).
+
+![image](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/5300940d-eb56-4b97-a9db-a1a89488d129)
+
+Now, it is clear from this graph that in the first 2 seconds the frequencies of about 666 and 1200 Hz and in the last 2 seconds the frequencies of about 666 and 1333 Hz formed our signal. Results that could not be obtained from any of the graphs of the time and frequency domains.
+
+To build a music recognition system, we need to compare the spectrogram of the signals. In this section, we have two sets of audio files at our disposal. The data collection contains the original version of some music and the audio input by the user should be compared with all the members of this collection. The clip collection contains several examples of user inputs that you can use to test your code. To compare the signals, we follow the steps below for each of the signals:
+
+1. Break the signal into 2048 sample windows (about 50 ms) and take the Fourier transform from each time window separately using numpy. We store this Fourier transform in the form of a matrix, each column of which is the Fourier transform output for a It is a time window.
+2. Keep the data about frequency around 100 to 5000 Hz and remove the rest (you can use fftfreq to get the frequency corresponding to each fft output element).
+3. Divide the frequencies of each time window into 6 baskets with equal sizes and consider the frequency that has the maximum value in each basket as the index frequency of that basket. To better understand this process, consider the following figure as an example. In this diagram, the frequency of the index of each basket in each time window is marked with a dot.
+
+![image](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/fd08c466-9193-4b74-b65c-e26047e8831c)
+
+After going through the above steps for each signal, we have a matrix with 6 rows, each row represents the index frequency in one of the baskets and each column represents the 6 index frequencies of each time window, which we call signals noiseprint.
+
+Now, to identify an input music, it is enough to compare its noiseprint with the noiseprint of the music we calculated earlier in our database (data set). For this, we use the similarity function. By receiving the noiseprint of the signal in the database in the first input and the noiseprint of the signal given by the user in the second input, this function returns their similarity in the form of a number. Finally, any signal from the database that is more similar to the user's input is selected as the detected music.
+
+
 
 
 
