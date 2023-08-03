@@ -45,8 +45,7 @@ b)
 
 ![bConvolution](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/83491b0c-4b38-450f-ab10-80b836c58c4f)
 
-
-
+# Fourier transform
 
 Sound is a kind of continuous mechanical wave that is created by the vibration of air particles. When this wave reaches our eardrum, it vibrates and we hear the sound. If we consider one of the particles of the environment (for example, an air molecule near the ear) and draw its displacement relative to its equilibrium point at different times, the sound waveform that we hear is created.
 
@@ -60,9 +59,45 @@ By expanding on the above equation, we can calculate the real part (b_k) and the
 
 ![image](https://github.com/MahdiTheGreat/FourierTransform/assets/47212121/5c46621a-ebe4-44fe-99ab-897e05777b88)
 
-For each of the four given signals, we calculate their Fourier series coefficients (b_k) and (c_k) for k=0 till k = 10 manually and draw the graph of |a_k|s For example, the output of one of the signals can be seen below:
+For each of the four given signals, we calculate their Fourier series coefficients (b_k) and (c_k) for k=0 till k = 10 manually and draw the graph of |a_k|s. Below we plot both the waves and their |a_k|s.
 
-![image](https://github.com/MahdiTheGreat/FourierTransform/assets/47212121/8da13957-b249-414f-8b25-ff2077f77ebb)
+wave1:
+
+![wave1](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/9c26f726-bbc8-4629-9c5c-45bc9985433a)
+
+wave1 |a_k|s:
+
+![wave1ak](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/c2f06f9c-115a-4a03-99d1-b84adf56e5c2)
+
+wave2:
+
+![wave2](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/ad8aad7a-beb1-4c75-bae6-2add60444ba9)
+
+wave2 |a_k|s:
+
+![wave2ak](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/8df1fb3c-2698-44ce-a016-002fe1200119)
+
+wave3:
+
+![wave3](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/1c46bc1c-6be1-4304-95fa-9594b9c4adab)
+
+wave3 |a_k|s:
+
+![wave3ak](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/33ee9444-b585-479b-a2e8-afdf4a63c3e6)
+
+wave4:
+
+![wave4](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/3268fce5-fe70-45bb-8eaa-eca2607e3a20)
+
+wave4 |a_k|s:
+
+![wave4ak](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/0095c1c9-38c8-4f4e-ac28-4cd43de76c78)
+
+as can be seen, by the plots, the sound file wave1.wav has the most complete sound, which we can understand both by listening to it and by looking at the graph of |a_k| coefficients, which shows us fourier series signals contribute to the consturction to wave1 more than the other files and have more effect in the construction of wave1, as seen by the coefficients.
+
+
+
+
 
 
 
