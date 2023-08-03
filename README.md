@@ -4,10 +4,34 @@ At first, we are gonna use the Matplotlib and NumPy library to plot some continu
 
 ![image](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/f750baf6-d86c-4664-a2f4-87a7612631ce)
 
-We plot these signals in signalsPlot.py. The plots of these functions are also uploaded to the repository.
+We plot these signals in signalsPlot.py. The plots of these functions can be seen below:
+
+x1(t):
+
+![x1(t)](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/903b1b03-eb16-406e-bce1-64bd4b7eebdc)
+
+x2(t):
+
+![x2(t)](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/e8f18126-0fe3-4e50-9263-ef6b8c858905)
+
+x3(t):
+
+![x3(t)](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/4118772b-8e7e-4bba-8d01-5e92950d01f8)
+
+x1[n]:
+
+![x1 n](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/4d698e9b-2db3-4a57-8bc7-60c657c2e8fe)
+
+x2[n]:
+
+![x2 n](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/7487dc4d-201a-45c9-bd49-83018e55da85)
+
+x3[n]:
+
+![x3 n](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/4360af03-7fc4-4582-85f0-eb7bd5fc7a25)
 
 # Convolution
-Next we are gonna program a function that calculates the convolusion of two inputed functions and plots it. For testing we use the two sets functions below as input:
+Next, we are gonna program a function that calculates the convolution of two inputted  functions and plots it. For testing, we use the two sets of functions below as input:
 
 ![image](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/d1b8fcc7-88a9-4cf9-9f3a-eeb682f513b7)
 
