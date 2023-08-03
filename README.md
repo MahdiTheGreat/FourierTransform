@@ -95,6 +95,21 @@ wave4 |a_k|s:
 
 as can be seen, by the plots, the sound file wave1.wav has the most complete sound, which we can understand both by listening to it and by looking at the graph of |a_k| coefficients, which shows us fourier series signals contribute to the consturction to wave1 more than the other files and have more effect in the construction of wave1, as seen by the coefficients.
 
+Next, we open the bonus audio file and with the help of the function we wrote and obtain its Fourier series coefficients and draw them in a graph below(the periodicity of this signal is approximately 229.34 milliseconds).
+
+Bonus:
+
+![bonus](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/ed0ef527-c85d-49e5-807a-c25b95ae2291)
+
+bonus |a_k|s:
+
+![bonusAk](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/713979b9-1403-41dc-9ba0-aaef2897db48)
+
+If we pay close attention, the 5 dominant frequencies in this signal are rational coefficients of each other, and for this reason, the sound of this signal is more pleasant than the previous ones. Also there is a more pleasant shape to the progression of these frequencies. The five dominant frequencies are in the form of e^-jwk for k from 5 to 10, and with w=2pi/(10114×(1/44100)).
+
+# Pyzam
+
+
 
 
 
