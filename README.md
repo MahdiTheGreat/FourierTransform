@@ -6,6 +6,24 @@ At first, we are gonna use the Matplotlib and NumPy library to plot some continu
 
 We plot these signals in signalsPlot.py. The plots of these functions are also uploaded to the repository.
 
+# Convolution
+Next we are gonna program a function that calculates the convolusion of two inputed functions and plots it. For testing we use the two sets functions below as input:
+
+![image](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/d1b8fcc7-88a9-4cf9-9f3a-eeb682f513b7)
+
+The outputs can be seen below:
+
+a)
+
+![aConvolution](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/d479d5ed-170b-4f5a-8651-7e4bf568f7f0)
+
+b)
+
+![bConvolution](https://github.com/MahdiTheGreat/SignalProcessing/assets/47212121/83491b0c-4b38-450f-ab10-80b836c58c4f)
+
+
+
+
 Sound is a kind of continuous mechanical wave that is created by the vibration of air particles. When this wave reaches our eardrum, it vibrates and we hear the sound. If we consider one of the particles of the environment (for example, an air molecule near the ear) and draw its displacement relative to its equilibrium point at different times, the sound waveform that we hear is created.
 
 Digital audio is also made by sampling this continuous wave at short intervals. For example, the sounds that we work with in this project have a sampling rate of 44100 Hz (that is, sampling at an interval of 1/44100 S).
